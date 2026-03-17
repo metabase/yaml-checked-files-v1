@@ -1,0 +1,93 @@
+name: Revenue by Industry (Monthly Plan Price)
+description: null
+entity_id: tBfTgTDbO1UDe82eEIW4x
+created_at: '2026-03-17T16:35:43.412522Z'
+creator_id: dan@metabase.com
+display: table
+archived: false
+collection_id: af1Sw4NhvjnpB9VCo8FPi
+collection_preview: true
+collection_position: null
+query_type: native
+database_id: bsb saas
+table_id: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: bsb saas
+  native:
+    query: |2-
+        SELECT company_industry, SUM(plan_price) AS monthly_revenue, COUNT(*) AS num_companies
+        FROM companies_dim
+        GROUP BY company_industry
+        ORDER BY monthly_revenue DESC;
+  type: native
+result_metadata:
+- base_type: type/Text
+  database_type: TEXT
+  display_name: company_industry
+  effective_type: type/Text
+  field_ref:
+  - field
+  - company_industry
+  - base-type: type/Text
+  name: company_industry
+  semantic_type: type/Company
+  source: native
+  lib/deduplicated-name: company_industry
+  lib/desired-column-alias: company_industry
+  lib/original-name: company_industry
+  lib/source: source/native
+  lib/source-column-alias: company_industry
+- base_type: type/Integer
+  database_type: INTEGER
+  display_name: monthly_revenue
+  effective_type: type/Integer
+  field_ref:
+  - field
+  - monthly_revenue
+  - base-type: type/Integer
+  name: monthly_revenue
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: monthly_revenue
+  lib/desired-column-alias: monthly_revenue
+  lib/original-name: monthly_revenue
+  lib/source: source/native
+  lib/source-column-alias: monthly_revenue
+- base_type: type/Integer
+  database_type: INTEGER
+  display_name: num_companies
+  effective_type: type/Integer
+  field_ref:
+  - field
+  - num_companies
+  - base-type: type/Integer
+  name: num_companies
+  semantic_type: type/Quantity
+  source: native
+  lib/deduplicated-name: num_companies
+  lib/desired-column-alias: num_companies
+  lib/original-name: num_companies
+  lib/source: source/native
+  lib/source-column-alias: num_companies
+visualization_settings:
+  column_settings: null
+  table.cell_column: monthly_revenue
+  table.pivot_column: num_companies
+card_schema: 23
+serdes/meta:
+- id: tBfTgTDbO1UDe82eEIW4x
+  label: revenue_by_industry__monthly_plan_price_
+  model: Card
+archived_directly: false
+dashboard_id: null
+document_id: null
+embedding_type: null
+metabase_version: v0.55.1-SNAPSHOT (eff2bf6)
+source_card_id: null
+type: question

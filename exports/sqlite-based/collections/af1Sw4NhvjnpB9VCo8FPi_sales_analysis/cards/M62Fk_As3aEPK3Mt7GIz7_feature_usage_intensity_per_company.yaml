@@ -1,0 +1,112 @@
+name: Feature Usage Intensity per Company
+description: null
+entity_id: M62Fk_As3aEPK3Mt7GIz7
+created_at: '2026-03-17T16:36:00.561702Z'
+creator_id: dan@metabase.com
+display: table
+archived: false
+collection_id: af1Sw4NhvjnpB9VCo8FPi
+collection_preview: true
+collection_position: null
+query_type: native
+database_id: bsb saas
+table_id: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: bsb saas
+  native:
+    query: |-
+      SELECT c.company_name, c.subscription_plan,
+               SUM(t.feature_usage_count) AS total_features,
+               AVG(t.feature_usage_count) AS avg_features_per_event
+        FROM transactions_fact t
+        JOIN companies_dim c ON t.company_id = c.company_id
+        GROUP BY t.company_id
+        ORDER BY total_features DESC;
+  type: native
+result_metadata:
+- base_type: type/Text
+  database_type: TEXT
+  display_name: company_name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - company_name
+  - base-type: type/Text
+  name: company_name
+  semantic_type: type/Company
+  source: native
+  lib/deduplicated-name: company_name
+  lib/desired-column-alias: company_name
+  lib/original-name: company_name
+  lib/source: source/native
+  lib/source-column-alias: company_name
+- base_type: type/Text
+  database_type: TEXT
+  display_name: subscription_plan
+  effective_type: type/Text
+  field_ref:
+  - field
+  - subscription_plan
+  - base-type: type/Text
+  name: subscription_plan
+  semantic_type: type/Subscription
+  source: native
+  lib/deduplicated-name: subscription_plan
+  lib/desired-column-alias: subscription_plan
+  lib/original-name: subscription_plan
+  lib/source: source/native
+  lib/source-column-alias: subscription_plan
+- base_type: type/Integer
+  database_type: INTEGER
+  display_name: total_features
+  effective_type: type/Integer
+  field_ref:
+  - field
+  - total_features
+  - base-type: type/Integer
+  name: total_features
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: total_features
+  lib/desired-column-alias: total_features
+  lib/original-name: total_features
+  lib/source: source/native
+  lib/source-column-alias: total_features
+- base_type: type/Float
+  database_type: FLOAT
+  display_name: avg_features_per_event
+  effective_type: type/Float
+  field_ref:
+  - field
+  - avg_features_per_event
+  - base-type: type/Float
+  name: avg_features_per_event
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: avg_features_per_event
+  lib/desired-column-alias: avg_features_per_event
+  lib/original-name: avg_features_per_event
+  lib/source: source/native
+  lib/source-column-alias: avg_features_per_event
+visualization_settings:
+  column_settings: null
+  table.cell_column: total_features
+  table.pivot_column: subscription_plan
+card_schema: 23
+serdes/meta:
+- id: M62Fk_As3aEPK3Mt7GIz7
+  label: feature_usage_intensity_per_company
+  model: Card
+archived_directly: false
+dashboard_id: null
+document_id: null
+embedding_type: null
+metabase_version: v0.55.1-SNAPSHOT (eff2bf6)
+source_card_id: null
+type: question
