@@ -1,0 +1,44 @@
+name: Check YAML exports
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          path: yaml-checked-files
+
+      - name: Checkout metabase
+        uses: actions/checkout@v4
+        with:
+          repository: metabase/metabase
+          ref: yaml-backed-metadata-provider
+          path: metabase
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+
+      - name: Install Clojure CLI
+        run: |
+          curl -O https://download.clojure.org/install/linux-install-1.12.0.1488.sh
+          sudo bash ./linux-install-1.12.0.1488.sh
+
+      - name: Run checker
+        working-directory: metabase
+        run: |
+          clj -X:ee metabase-enterprise.checker.checker/cli \
+            :export '"${{ github.workspace }}/yaml-checked-files/exports/sqlite-based"' \
+            :output '"/tmp/checker-output.txt"'
+
+      - name: Show output
+        run: cat /tmp/checker-output.txt
