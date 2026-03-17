@@ -36,7 +36,7 @@ jobs:
       - name: Run checker
         working-directory: metabase
         run: |
-          clj -X:ee metabase-enterprise.checker.checker/cli \
+          clojure -X:ee metabase-enterprise.checker.checker/cli \
             :export '"${{ github.workspace }}/yaml-checked-files/exports/sqlite-based"' \
             :output '"/tmp/checker-output.txt"'
 
