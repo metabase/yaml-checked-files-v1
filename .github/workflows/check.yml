@@ -6,8 +6,28 @@ on:
   pull_request:
 
 jobs:
-  check:
+  discover:
     runs-on: ubuntu-latest
+    outputs:
+      exports: ${{ steps.find.outputs.exports }}
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Find export directories
+        id: find
+        # List all directories under exports/ as a JSON array for the matrix
+        run: |
+          exports=$(ls -d exports/*/ | xargs -n1 basename | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "exports=$exports" >> $GITHUB_OUTPUT
+
+  check:
+    needs: discover
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        export: ${{ fromJson(needs.discover.outputs.exports) }}
+      fail-fast: false
 
     steps:
       - name: Checkout this repo
@@ -52,7 +72,7 @@ jobs:
         working-directory: metabase
         run: |
           clojure -X:ee metabase-enterprise.checker.checker/cli \
-            :export '"${{ github.workspace }}/yaml-checked-files/exports/sqlite-based"' \
+            :export '"${{ github.workspace }}/yaml-checked-files/exports/${{ matrix.export }}"' \
             :output '"/tmp/checker-output.txt"'
 
       - name: Show output
