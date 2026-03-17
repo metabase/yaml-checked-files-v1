@@ -20,6 +20,7 @@ jobs:
         with:
           repository: metabase/metabase
           ref: yaml-backed-metadata-provider
+          fetch-depth: 1
           path: metabase
 
       - name: Setup Java
