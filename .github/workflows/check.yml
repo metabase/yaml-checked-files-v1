@@ -34,6 +34,20 @@ jobs:
           curl -O https://download.clojure.org/install/linux-install-1.12.0.1488.sh
           sudo bash ./linux-install-1.12.0.1488.sh
 
+      - name: Get week number
+        id: week
+        run: echo "week=$(date +%Y-%W)" >> $GITHUB_OUTPUT
+
+      - name: Cache Clojure dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.m2/repository
+            ~/.gitlibs
+          key: clj-deps-${{ steps.week.outputs.week }}
+          restore-keys: |
+            clj-deps-
+
       - name: Run checker
         working-directory: metabase
         run: |
