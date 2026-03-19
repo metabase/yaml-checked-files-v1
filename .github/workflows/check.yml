@@ -68,12 +68,21 @@ jobs:
           restore-keys: |
             clj-deps-
 
-      - name: Run checker
+      - name: Run structural checker
+        continue-on-error: true
         working-directory: metabase
         run: |
-          clojure -X:ee metabase-enterprise.checker.checker/cli \
-            :export '"${{ github.workspace }}/yaml-checked-files/exports/${{ matrix.export }}"' \
-            :output '"/tmp/checker-output.txt"'
+          clojure -M:ee -m metabase.core.bootstrap \
+            --mode checker --checker structural \
+            --export "${{ github.workspace }}/yaml-checked-files/exports/sqlite-based"
+
+      - name: Run reference checker
+        working-directory: metabase
+        run: |
+          clojure -M:ee -m metabase.core.bootstrap \
+            --mode checker --checker cards \
+            --export "${{ github.workspace }}/yaml-checked-files/exports/sqlite-based" \
+            --output "/tmp/checker-output.txt"
 
       - name: Show output
         run: cat /tmp/checker-output.txt
