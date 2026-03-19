@@ -1,0 +1,32 @@
+name: Internal Metabase Database
+engine: postgres
+schemas:
+  public:
+    v_content:
+      fields: [action_model_id, action_type, archived, collection_id, collection_is_official, collection_is_personal, created_at, creator_id, description, entity_id, entity_qualified_id, entity_type, event_timestamp, id, is_embedding_enabled, is_verified, made_public_by_user, name, question_database_id, question_is_native, question_viz_type, updated_at]
+    v_tasks:
+      fields: [database_id, database_qualified_id, details, duration_seconds, ended_at, id, run_id, started_at, status, task]
+    v_alerts:
+      fields: [alert_condition, archived, card_id, card_qualified_id, created_at, creator_id, dashboard_qualified_id, entity_id, entity_qualified_id, recipient_external, recipient_type, recipients, schedule_day, schedule_hour, schedule_type, updated_at]
+    v_subscriptions:
+      fields: [archived, created_at, creator_id, dashboard_qualified_id, entity_id, entity_qualified_id, parameters, recipient_external, recipient_type, recipients, schedule_day, schedule_hour, schedule_type, updated_at]
+    v_audit_log:
+      fields: [details, end_timestamp, entity_id, entity_qualified_id, entity_type, id, model, model_id, timestamp, topic, user_id]
+    v_task_runs:
+      fields: [duration_seconds, ended_at, entity_id, entity_qualified_id, entity_type, id, process_uuid, run_type, started_at, status, updated_at]
+    v_users:
+      fields: [date_joined, email, entity_qualified_id, first_name, full_name, is_active, is_admin, last_login, last_name, locale, sso_source, type, updated_at, user_id]
+    v_dashboardcard:
+      fields: [card_qualified_id, col, created_at, dashboard_id, dashboard_qualified_id, dashboardtab_id, entity_id, entity_qualified_id, id, parameter_mappings, question_id, row, size_x, size_y, updated_at, visualization_settings]
+    v_query_log:
+      fields: [action_id, action_qualified_id, cache_hit, card_id, card_qualified_id, dashboard_id, dashboard_qualified_id, database_id, database_qualified_id, entity_id, error, is_native, lens_id, lens_params, pulse_id, query, query_source, result_rows, running_time_seconds, started_at, transform_id, transform_qualified_id, user_id]
+    v_tables:
+      fields: [active, created_at, database_id, description, display_name, entity_id, entity_qualified_id, entity_type, estimated_row_count, is_upload, name, owner_email, owner_user_id, schema, updated_at, view_count, visibility_type]
+    v_fields:
+      fields: [active, base_type, created_at, description, display_name, entity_id, entity_qualified_id, fk_target_field_id, has_field_values, name, table_id, updated_at, visibility_type]
+    v_databases:
+      fields: [auto_run_queries, cache_field_values_schedule, cache_ttl, created_at, creator_id, database_type, db_version, description, entity_id, entity_qualified_id, is_on_demand, metadata_sync_schedule, name, timezone, updated_at]
+    v_group_members:
+      fields: [group_id, group_name, user_id]
+    v_view_log:
+      fields: [details, entity_id, entity_qualified_id, entity_type, id, timestamp, user_id]

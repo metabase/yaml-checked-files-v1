@@ -1,0 +1,5 @@
+name: zomato
+engine: sqlite
+tables:
+  zomato:
+    fields: [address, avg_cost, booking, city, country_code, cuisines, currency, delivery, delivery_active, id, latitude, locality, locality_verbose, longitude, name, order_menu, range, rating, rating_color, rating_text, votes]
