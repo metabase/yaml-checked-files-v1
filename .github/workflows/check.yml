@@ -72,14 +72,14 @@ jobs:
         continue-on-error: true
         working-directory: metabase
         run: |
-          clojure -M:ee -m metabase.core.bootstrap \
+          clojure -M:drivers:ee -m metabase.core.bootstrap \
             --mode checker --checker structural \
             --export "${{ github.workspace }}/yaml-checked-files/exports/sqlite-based"
 
       - name: Run reference checker
         working-directory: metabase
         run: |
-          clojure -M:ee -m metabase.core.bootstrap \
+          clojure -M:drivers:ee -m metabase.core.bootstrap \
             --mode checker --checker cards \
             --export "${{ github.workspace }}/yaml-checked-files/exports/sqlite-based" \
             --output "/tmp/checker-output.txt"
