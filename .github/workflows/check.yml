@@ -54,6 +54,9 @@ jobs:
           curl -O https://download.clojure.org/install/linux-install-1.12.0.1488.sh
           sudo bash ./linux-install-1.12.0.1488.sh
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
       - name: Get week number
         id: week
         run: echo "week=$(date +%Y-%W)" >> $GITHUB_OUTPUT
