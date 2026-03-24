@@ -1,0 +1,979 @@
+name: A look at Zomato
+description: An overview of Zomato and how it's distributed across time, place, and categories.
+entity_id: g6W3f_OPX47s17dntBTG8
+created_at: '2026-03-17T16:25:20.79027Z'
+creator_id: dan@metabase.com
+archived: false
+collection_id: _HYuQcKFgF7dmwkiG9m3F
+auto_apply_filters: true
+collection_position: null
+position: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+show_in_getting_started: false
+caveats: null
+points_of_interest: null
+parameters:
+- id: '-1472035430'
+  name: Booking
+  position: 2
+  sectionId: string
+  slug: booking
+  type: string/=
+- id: '-1989382574'
+  name: Delivery
+  position: 0
+  sectionId: string
+  slug: delivery
+  type: string/=
+- id: '-295848152'
+  name: Rating Text
+  position: 1
+  sectionId: string
+  slug: rating_text
+  type: string/=
+- id: '1153626422'
+  name: Delivery Active
+  position: 3
+  sectionId: string
+  slug: delivery_active
+  type: string/=
+serdes/meta:
+- id: g6W3f_OPX47s17dntBTG8
+  label: a_look_at_zomato
+  model: Dashboard
+archived_directly: false
+dashcards:
+- entity_id: hrjP3BwvjYw8p7ygmfm3Z
+  card_id: null
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 2
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    dashcard.background: false
+    text: '# Summary'
+    text.align_vertical: bottom
+    virtual_card:
+      dataset_query: {}
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: hrjP3BwvjYw8p7ygmfm3Z
+    model: DashboardCard
+- entity_id: awwj3hMv71-97vxFV6v2l
+  card_id: 8FzTZTimK6CysRQIkEW1y
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 2
+  col: 0
+  size_x: 6
+  size_y: 3
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 8FzTZTimK6CysRQIkEW1y
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: 8FzTZTimK6CysRQIkEW1y
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: 8FzTZTimK6CysRQIkEW1y
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: 8FzTZTimK6CysRQIkEW1y
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: awwj3hMv71-97vxFV6v2l
+    model: DashboardCard
+- entity_id: mhA1VC0sd_pnWKz-4144-
+  card_id: null
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 5
+  col: 0
+  size_x: 24
+  size_y: 2
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    dashcard.background: false
+    text: '# Where these Zomato are'
+    text.align_vertical: bottom
+    virtual_card:
+      dataset_query: {}
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: mhA1VC0sd_pnWKz-4144-
+    model: DashboardCard
+- entity_id: PR3JL3tTn4ycMinLmnKk6
+  card_id: 5LN7pQgkmS4q4wf3QOngj
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 7
+  col: 0
+  size_x: 12
+  size_y: 6
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 5LN7pQgkmS4q4wf3QOngj
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: 5LN7pQgkmS4q4wf3QOngj
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: 5LN7pQgkmS4q4wf3QOngj
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: 5LN7pQgkmS4q4wf3QOngj
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: PR3JL3tTn4ycMinLmnKk6
+    model: DashboardCard
+- entity_id: gcQr6eY803F91YwWxaS17
+  card_id: null
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 13
+  col: 0
+  size_x: 24
+  size_y: 2
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    dashcard.background: false
+    text: '# How these Zomato are distributed'
+    text.align_vertical: bottom
+    virtual_card:
+      dataset_query: {}
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: gcQr6eY803F91YwWxaS17
+    model: DashboardCard
+- entity_id: REoxssBua7Dmq1dF9a9Pp
+  card_id: nlGO645VOOSHYyaj7Ha09
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 15
+  col: 0
+  size_x: 12
+  size_y: 6
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: nlGO645VOOSHYyaj7Ha09
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: nlGO645VOOSHYyaj7Ha09
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: nlGO645VOOSHYyaj7Ha09
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: nlGO645VOOSHYyaj7Ha09
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: REoxssBua7Dmq1dF9a9Pp
+    model: DashboardCard
+- entity_id: nksAY4hxRsloKQeO8EfNt
+  card_id: hwEaUEiZYRFlHdPJQELBn
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 15
+  col: 12
+  size_x: 12
+  size_y: 6
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: hwEaUEiZYRFlHdPJQELBn
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: hwEaUEiZYRFlHdPJQELBn
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: hwEaUEiZYRFlHdPJQELBn
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: hwEaUEiZYRFlHdPJQELBn
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: nksAY4hxRsloKQeO8EfNt
+    model: DashboardCard
+- entity_id: zS2wFJQjZxrthRvl7_TSg
+  card_id: 3dS8N4-LJFgrfLbVYiW2T
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 21
+  col: 0
+  size_x: 12
+  size_y: 6
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 3dS8N4-LJFgrfLbVYiW2T
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: 3dS8N4-LJFgrfLbVYiW2T
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: 3dS8N4-LJFgrfLbVYiW2T
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: 3dS8N4-LJFgrfLbVYiW2T
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: zS2wFJQjZxrthRvl7_TSg
+    model: DashboardCard
+- entity_id: 7NbQpV6P9X1ekLu7s2IWj
+  card_id: sABbTBJcnZX3hNrGZyAsG
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 21
+  col: 12
+  size_x: 12
+  size_y: 6
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: sABbTBJcnZX3hNrGZyAsG
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: sABbTBJcnZX3hNrGZyAsG
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: sABbTBJcnZX3hNrGZyAsG
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: sABbTBJcnZX3hNrGZyAsG
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: 7NbQpV6P9X1ekLu7s2IWj
+    model: DashboardCard
+- entity_id: BOT3Ui7yrVWo4EesQONeF
+  card_id: xZtnWkxAGO7bLbaunUpAz
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 27
+  col: 0
+  size_x: 12
+  size_y: 6
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: xZtnWkxAGO7bLbaunUpAz
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: xZtnWkxAGO7bLbaunUpAz
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: xZtnWkxAGO7bLbaunUpAz
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: xZtnWkxAGO7bLbaunUpAz
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: BOT3Ui7yrVWo4EesQONeF
+    model: DashboardCard
+- entity_id: Mi1KeQKi6jdtp21Me9mxk
+  card_id: qqO5xiEcjYWziVh-XaSk8
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 27
+  col: 12
+  size_x: 12
+  size_y: 8
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: qqO5xiEcjYWziVh-XaSk8
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: qqO5xiEcjYWziVh-XaSk8
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: qqO5xiEcjYWziVh-XaSk8
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: qqO5xiEcjYWziVh-XaSk8
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: Mi1KeQKi6jdtp21Me9mxk
+    model: DashboardCard
+- entity_id: vjhPPPDBdXxfHMqhTPyTb
+  card_id: pQl7XDPl03-AbE5kuKLLh
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 33
+  col: 0
+  size_x: 12
+  size_y: 8
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: pQl7XDPl03-AbE5kuKLLh
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: pQl7XDPl03-AbE5kuKLLh
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: pQl7XDPl03-AbE5kuKLLh
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: pQl7XDPl03-AbE5kuKLLh
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: vjhPPPDBdXxfHMqhTPyTb
+    model: DashboardCard
+- entity_id: F8MTTMqD57YSYzfhppchv
+  card_id: Rdq-tuApsK7w5pF4GCeBy
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 35
+  col: 12
+  size_x: 12
+  size_y: 8
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: Rdq-tuApsK7w5pF4GCeBy
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: Rdq-tuApsK7w5pF4GCeBy
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: Rdq-tuApsK7w5pF4GCeBy
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: Rdq-tuApsK7w5pF4GCeBy
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: F8MTTMqD57YSYzfhppchv
+    model: DashboardCard
+- entity_id: 3syq6ArdAlK1poDpMbqx2
+  card_id: HfDN2DwyzcpL1Js2LiVKQ
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 41
+  col: 0
+  size_x: 12
+  size_y: 8
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: HfDN2DwyzcpL1Js2LiVKQ
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: HfDN2DwyzcpL1Js2LiVKQ
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: HfDN2DwyzcpL1Js2LiVKQ
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: HfDN2DwyzcpL1Js2LiVKQ
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: 3syq6ArdAlK1poDpMbqx2
+    model: DashboardCard
+- entity_id: aFxcRS_W3IrbcG-n0mNqS
+  card_id: cX_2A_yVSi3R3iT_J5JTv
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 43
+  col: 12
+  size_x: 12
+  size_y: 8
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: cX_2A_yVSi3R3iT_J5JTv
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: cX_2A_yVSi3R3iT_J5JTv
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: cX_2A_yVSi3R3iT_J5JTv
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: cX_2A_yVSi3R3iT_J5JTv
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: aFxcRS_W3IrbcG-n0mNqS
+    model: DashboardCard
+- entity_id: 9DwwrgkoTUUshseFmrDlD
+  card_id: null
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 51
+  col: 0
+  size_x: 24
+  size_y: 2
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    dashcard.background: false
+    text: '# These are the same for all Zomato'
+    text.align_vertical: bottom
+    virtual_card:
+      dataset_query: {}
+      display: text
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: 9DwwrgkoTUUshseFmrDlD
+    model: DashboardCard
+- entity_id: 0gDmdUe5Xc0BjmOo9xw5E
+  card_id: ZqMrfmZRIMn3qEEQ5mUBU
+  created_at: '2026-03-17T16:25:20.79027Z'
+  row: 53
+  col: 0
+  size_x: 3
+  size_y: 3
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: ZqMrfmZRIMn3qEEQ5mUBU
+    parameter_id: '-1472035430'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - booking
+      - null
+    - stage-number: 0
+  - card_id: ZqMrfmZRIMn3qEEQ5mUBU
+    parameter_id: '-1989382574'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery
+      - null
+    - stage-number: 0
+  - card_id: ZqMrfmZRIMn3qEEQ5mUBU
+    parameter_id: '-295848152'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - rating_text
+      - null
+    - stage-number: 0
+  - card_id: ZqMrfmZRIMn3qEEQ5mUBU
+    parameter_id: '1153626422'
+    target:
+    - dimension
+    - - field
+      - - zomato
+        - null
+        - zomato
+        - delivery_active
+      - null
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: g6W3f_OPX47s17dntBTG8
+    model: Dashboard
+  - id: 0gDmdUe5Xc0BjmOo9xw5E
+    model: DashboardCard
+embedding_type: null
+initially_published_at: null
+tabs: []
+width: fixed
