@@ -84,5 +84,5 @@ jobs:
             --export "${{ github.workspace }}/yaml-checked-files/exports/sqlite-based" \
             --output "/tmp/checker-output.txt"
 
-      - name: Show output
+      - name: Show reference checker output
         run: cat /tmp/checker-output.txt
